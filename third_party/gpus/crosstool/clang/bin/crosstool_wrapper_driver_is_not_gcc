@@ -46,10 +46,9 @@ import pipes
 CURRENT_DIR = os.path.dirname(sys.argv[0])
 CPU_COMPILER = ('/usr/bin/gcc')
 NVCC_PATH = CURRENT_DIR + '/../../../cuda/bin/nvcc'
-GCC_HOST_COMPILER_PATH = ('/usr/bin/gcc')
+GCC_HOST_COMPILER_PATH = ('/usr/local/cuda/bin/gcc')
 LLVM_HOST_COMPILER_PATH = ('/usr/bin/gcc')
-PREFIX_DIR = os.path.dirname(GCC_HOST_COMPILER_PATH)
-
+PREFIX_DIR = os.path.dirname(CPU_COMPILER)
 
 def Log(s):
   print 'gpus/crosstool: {0}'.format(s)
